@@ -22,7 +22,7 @@ const FormComponent = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await fetch('http://localhost:5000/submit', {
+            const response = await fetch('https://cavintec-task-git-main-deepavishali.vercel.app/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ const FormComponent = () => {
                         />
                     </Grid>
                     <Grid item xs={8}>
-                        <label>Select Field:</label>
+                        <label>Gender</label>
                         <Select
                             options={[{ value: 'Female', label: 'Female' }, { value: 'Male', label: 'Male' }, { value: 'TransGender', label: 'TransGender' }]}
                             {...register('selectField', { required: 'This field is required' })}
